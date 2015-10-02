@@ -121,12 +121,6 @@ function capitalize(str) {
 
 myPoem = capitalize(myPoem);
 
-
-function capitalize(str) {
-
-
-}
-
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
