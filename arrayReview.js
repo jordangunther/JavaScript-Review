@@ -103,15 +103,29 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
 function capitalize(str) {
-	for (var i = 0; str.length; i++) {
-		var letter = str.slice(i, 1);
-		letter = letter.toUpperCase();
-		str = str.splice(i, 1, letter)
+	var newStr = "";
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] === " ") {
+			var letter = str.slice(i + 1, i + 2);
+			letter = letter.toUpperCase();
+			newStr = newStr + " " + letter;
+			i++;	
+		}
+		else {
+			var letter = str.slice(i, i + 1);
+			newStr = newStr + letter;
+		}
 	}
-	return str;
+	return newStr;
 }
 
+myPoem = capitalize(myPoem);
 
+
+function capitalize(str) {
+
+
+}
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -119,3 +133,27 @@ function capitalize(str) {
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+
+function vowelCounter(str) {
+	var counter = 0;
+	for (var i = 0; i < str.length; i++){
+		switch (str[i]) {
+			case "e":
+				counter++
+				break;
+			case "i":
+				counter++
+				break;
+			case "a":
+				counter++
+				break;
+			case "o":
+				counter++
+				break;
+			case "u":
+				counter++
+				break;				
+		}	
+	}
+	console.log(counter);
+}
